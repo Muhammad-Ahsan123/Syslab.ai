@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --background: #0a0a0a; */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.onHoverProduct:hover {
+  background-image: url("https://syslab.ai/assets/images/service-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Specific hover background for different product types */
+/* .onHoverProduct.first:hover {
+  background-image: url("https://syslab.ai/assets/images/service-icon-hover-02.png");
+  background-position: right top;
+}
+
+
+.second:hover  {
+  background-image: url("https://syslab.ai/assets/images/service-icon-hover-03.png") !important;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.third:hover  {
+  background-image: url("https://syslab.ai/assets/images/service-icon-hover-04.png") !important;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fourth:hover  {
+  background-image: url("https://syslab.ai/assets/images/service-icon-hover-04.png") !important;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.onHoverProduct:hover {
+  transition: all 0.3s ease;
+  /* Smooth transition */
+}
