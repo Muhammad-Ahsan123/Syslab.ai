@@ -8,13 +8,13 @@ function Section2() {
         <>
             <div style={{ display: 'flex', padding: '0 8vw', height: '100vh' }}>
                 <div style={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <p style={{ fontSize: '25px', fontWeight: '700' }}>
+                    <p style={{ fontSize: '25px', fontWeight: '700', color: '#212529' }}>
                         Technology Meets <span style={{ color: '#4B8EF1' }}>
                             Innovation
                         </span>
                     </p>
                     <Image src={headingLine} alt="" />
-                    <p style={{ fontSize: '18px'}}>
+                    <p style={{ fontSize: '18px', color: 'black' }}>
                         We have been working on some of the exciting technologies
                         for research and development. Details of some of the leading
                         research publications are provided here
