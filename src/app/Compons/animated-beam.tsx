@@ -3,7 +3,16 @@
 import React, { forwardRef, useRef } from "react";
 
 import { cn } from "@/lib/utils";
+import Image from 'next/image'
 import { AnimatedBeam } from "../../components/ui/animated-beam";
+import Aprendizagem from "../../../public/Aprendizagem.png";
+import Bespoke from "../../../public/Bespoke-Applications.png";
+import Technology from "../../../public/Technology-icon.png";
+import ai from "../../../public/artificial-intelligence.png";
+import blockchain from "../../../public/blockchain.png";
+import cloud from "../../../public/cloud.png";
+import neuralNetwork from "../../../public/neural-network.png";
+import bgImage from "../../../public/Innovative background.jpg";
 
 const Circle = forwardRef<
     HTMLDivElement,
@@ -35,40 +44,45 @@ export function AnimatedBeamDemo() {
     const div7Ref = useRef<HTMLDivElement>(null);
 
     return (
+
         <div
-            className="relative flex h-[500px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
+            className="relative flex h-screen w-full items-center justify-center overflow-hidden mt-36 p-10"
             ref={containerRef}
         >
-            <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
-                <div className="flex flex-row items-center justify-between">
-                    <Circle ref={div1Ref}>
-                        <Icons.googleDrive />
-                    </Circle>
-                    <Circle ref={div5Ref}>
-                        <Icons.googleDocs />
-                    </Circle>
+            {/* <div className="inset-0 bg-innovative-bg bg-cover bg-center w-[90%] backdrop-blur-lg"> */}
+                <div className="flex size-full  max-w-6xl max-h-[500px]  justify-between ">
+                    <div className="flex size-full flex-col max-w-6xl max-h-[500px] items-stretch justify-between gap-10">
+                        <div className="flex flex-row items-center justify-between">
+                            <Circle className="h-20 w-20" ref={div1Ref}>
+                                <Image src={Technology} alt="Technology Icon" width={40} height={40} />
+                            </Circle>
+                            <Circle className="h-20 w-20" ref={div5Ref}>
+                                <Image src={Bespoke} alt="Technology Icon" width={40} height={40} />
+                            </Circle>
+                        </div>
+                        <div className="flex flex-row items-center justify-between">
+                            <Circle className="h-20 w-20" ref={div2Ref}>
+                                <Image src={ai} alt="Technology Icon" width={40} height={40} />
+                            </Circle>
+                            <Circle ref={div4Ref} className="size-28 sm:h-36 sm:w-36 md:h-60 md:w-60 text-xs" >
+                                <p className="text-sm md:text-xl" style={{ textAlign: 'center' }} >Technology Meets Innovation</p>
+                                {/* <Icons.openai /> */}
+                            </Circle>
+                            <Circle className="h-20 w-20" ref={div6Ref}>
+                                <Image src={blockchain} alt="Technology Icon" width={40} height={40} />
+                            </Circle>
+                        </div>
+                        <div className="flex flex-row items-center justify-between">
+                            <Circle className="h-20 w-20" ref={div3Ref}>
+                                <Image src={Aprendizagem} alt="Technology Icon" width={40} height={40} />
+                            </Circle>
+                            <Circle className="h-20 w-20" ref={div7Ref}>
+                                <Image src={cloud} alt="Technology Icon" width={40} height={40} />
+                            </Circle>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex flex-row items-center justify-between">
-                    <Circle ref={div2Ref}>
-                        <Icons.notion />
-                    </Circle>
-                    <Circle ref={div4Ref} className="size-24 text-xs" >
-                        <p style={{textAlign : 'center'}} >Technology Meets Innovation</p>
-                        {/* <Icons.openai /> */}
-                    </Circle>
-                    <Circle ref={div6Ref}>
-                        <Icons.zapier />
-                    </Circle>
-                </div>
-                <div className="flex flex-row items-center justify-between">
-                    <Circle ref={div3Ref}>
-                        <Icons.whatsapp />
-                    </Circle>
-                    <Circle ref={div7Ref}>
-                        <Icons.messenger />
-                    </Circle>
-                </div>
-            </div>
+            {/* </div> */}
 
             <AnimatedBeam
                 containerRef={containerRef}

@@ -19,37 +19,14 @@ body {
   background-size: cover;
 }
 
-/* Specific hover background for different product types */
-/* .onHoverProduct.first:hover {
-  background-image: url("https://syslab.ai/assets/images/service-icon-hover-02.png");
-  background-position: right top;
-}
-
-
-.second:hover  {
-  background-image: url("https://syslab.ai/assets/images/service-icon-hover-03.png") !important;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.third:hover  {
-  background-image: url("https://syslab.ai/assets/images/service-icon-hover-04.png") !important;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.fourth:hover  {
-  background-image: url("https://syslab.ai/assets/images/service-icon-hover-04.png") !important;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
 .onHoverProduct:hover {
   transition: all 0.3s ease;
-  /* Smooth transition */
 }
+
+.header-right-side p{
+  cursor: pointer;
+}
+
 
 @layer base {
   :root {

@@ -19,47 +19,80 @@
 
 
 import React from 'react'
+import { NavbarSimple } from './Compons/Header';
 import { cn } from "@/lib/utils";
 import Marquee from "../components/ui/marquee";
 import { AnimatedBeamDemo } from '../app/Compons/animated-beam'
 import { TabsDemo } from './Compons/tabDemo';
+import MainBanner from './Compons/MainBanner';
+import Footer from './Compons/Footer';
+// import {images} from '../../public/Aprendizagem.png'
 function page() {
+  const images = {
+    a: "/fastone.png", // Referencing the image relative to the public folder
+    b: "/googledev9.png", // Same here
+    c: "/hec2.png", // Same here
+    d: "/ncai3.png", // Same here
+    e: "/nic4.png", // Same here
+    f: "/nividia6.png", // Same here
+    g: "/pasha7.png", // Same here
+    h: "/pif8.png", // Same here
+    i: "/shamsipng5.png", // Same here
+  };
   const reviews = [
     {
       name: "Jack",
       username: "@jack",
       body: "I've never seen anything like this before. It's amazing. I love it.",
-      img: "https://avatar.vercel.sh/jack",
+      img: images.a,
     },
     {
       name: "Jill",
       username: "@jill",
       body: "I don't know what to say. I'm speechless. This is amazing.",
-      img: "https://avatar.vercel.sh/jill",
+      img: images.b,
     },
     {
       name: "John",
       username: "@john",
       body: "I'm at a loss for words. This is amazing. I love it.",
-      img: "https://avatar.vercel.sh/john",
+      img: images.c,
     },
     {
       name: "Jane",
       username: "@jane",
       body: "I'm at a loss for words. This is amazing. I love it.",
-      img: "https://avatar.vercel.sh/jane",
+      img: images.d,
     },
     {
       name: "Jenny",
       username: "@jenny",
       body: "I'm at a loss for words. This is amazing. I love it.",
-      img: "https://avatar.vercel.sh/jenny",
+      img: images.e,
     },
     {
       name: "James",
       username: "@james",
       body: "I'm at a loss for words. This is amazing. I love it.",
-      img: "https://avatar.vercel.sh/james",
+      img: images.f,
+    },
+    {
+      name: "James",
+      username: "@james",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: images.g,
+    },
+    {
+      name: "James",
+      username: "@james",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: images.h,
+    },
+    {
+      name: "James",
+      username: "@james",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: images.i,
     },
   ];
 
@@ -69,14 +102,16 @@ function page() {
 
   return (
     <>
-      <TabsDemo />
+      <NavbarSimple />
+      <MainBanner />
       <AnimatedBeamDemo />
-      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-        <Marquee pauseOnHover className="[--duration:20s]">
+      <TabsDemo />
+      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+        {/* <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
-        </Marquee>
+        </Marquee> */}
         <Marquee reverse pauseOnHover className="[--duration:20s]">
           {secondRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
@@ -85,6 +120,7 @@ function page() {
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
       </div>
+      <Footer />
     </>
   )
 }
